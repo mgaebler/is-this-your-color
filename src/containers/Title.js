@@ -5,11 +5,21 @@ import React, {
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import Main from '../components/Main';
+import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
+
 
 class Title extends Component {
   render() {
     const {actions} = this.props;
-    return <Main actions={actions}/>;
+    return (
+      <div className='title-screen'>
+        <ReactCSSTransitionGroup transitionName="example" transitionAppear={true} transitionAppearTimeout={500}>
+          <h1>You Dont know Color</h1>
+        </ReactCSSTransitionGroup>
+
+        <Main actions={actions}/>
+      </div>
+    );
   }
 }
 

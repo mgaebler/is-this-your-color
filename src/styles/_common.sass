@@ -1,0 +1,36 @@
+@import url(https://fonts.googleapis.com/css?family=Poiret+One)
+
+/* Base Application Styles */
+html, body, #app, .canvas
+  height: 100%
+
+.canvas
+  display: flex
+  align-items: center
+  justify-content: center
+  font-family: 'Poiret One', cursive
+  font-weight: lighter
+
+
+$dimension: 48px
+=button-background()
+  background-repeat: no-repeat
+  background-position: center
+  background-size: 65%
+
+button.controll
+  border-radius: 999px
+  margin: $dimension
+  padding: $dimension
+  border: none
+  vertical-align: middle
+
+button.true
+  background: #4CAF50
+  background-image: url(../images/true.svg)
+  +button-background
+
+button.false
+  background: #F44336
+  background-image: url(../images/false.svg)
+  +button-background
